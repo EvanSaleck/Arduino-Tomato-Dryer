@@ -55,23 +55,23 @@ void loop() {
       LCD_RGB.print((int)(dht_2_DHT22.readHumidity()));
       delay(10000);
       
-        else if( pressDuration < SHORT_PRESS_TIME )
-        LCD_RGB.clear();
-        LCD_RGB.clear();
-        LCD_RGB.setCursor(0,0);
-        LCD_RGB.print("Temperature:");
-        LCD_RGB.setCursor(7,1);
-        LCD_RGB.print((int)(dht_2_DHT22.readTemperature()));
-        delay(10000);
+      if( pressDuration < SHORT_PRESS_TIME )
+      LCD_RGB.clear();
+      LCD_RGB.clear();
+      LCD_RGB.setCursor(0,0);
+      LCD_RGB.print("Temperature:");
+      LCD_RGB.setCursor(7,1);
+      LCD_RGB.print((int)(dht_2_DHT22.readTemperature()));
+      delay(10000);
         
-        else if( pressDuration < LONG_PRESS_TIME )
-        LCD_RGB.clear(); //Bloc pour Humidité
-        LCD_RGB.clear();
-        LCD_RGB.setCursor(0,0);
-        LCD_RGB.print("Taux D\' humidite:");
-        LCD_RGB.setCursor(7,1);
-        LCD_RGB.print((int)(dht_2_DHT22.readHumidity()));
-        delay(10000);
+      if( pressDuration < LONG_PRESS_TIME )
+      LCD_RGB.clear(); //Bloc pour Humidité
+      LCD_RGB.clear();
+      LCD_RGB.setCursor(0,0);
+      LCD_RGB.print("Taux D\' humidite:");
+      LCD_RGB.setCursor(7,1);
+      LCD_RGB.print((int)(dht_2_DHT22.readHumidity()));
+      delay(10000);
 
 
   }
